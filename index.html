@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAM Flags Explained Improved</title>
+    <link rel="stylesheet" href="css/bootstrap.cosmo.css" />
+    <link rel="stylesheet" href="css/bootstrap.paper.checkboxes.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/samflags.css" />
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/samflags.js"></script>
+</head>
+<body>
+<section class="container">
+    <div class="row sam-flags-spacer">
+        <span style="font-size:2.3em">
+            <span class="fa fa-flag"></span>&nbsp;
+            SAM Flags Explained
+        </span>
+        <p>This utility improves on the Broad utility that explains SAM flags in plain English.<br/>
+        It also allows switching easily from a read to its mate. </p>
+    </div>
+    <div class="row sam-flags-spacer">
+        <div class="col-sm-1">
+            <label class="control-label" for="flag_field" style="font-size:2em">Flag:</label>
+        </div>
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="flag_field" style="font-size:1.8em"/>
+        </div>
+        <div class="col-sm-2">
+            <button type="button" class="btn btn-primary" id="switch_to_mate_btn">Switch to Mate</button>
+        </div>
+    </div>
+    <div class="row sam-flags-spacer">
+        <div class="col-sm-4">
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="001" data-bit="1"/> Read Paired
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="002" data-bit="2"/> Read Mapped in Proper Pair
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="004" data-bit="4"/> Read Unmapped
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="008" data-bit="8"/> Mate Unmapped
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="010" data-bit="16"/> Read Reverse Strand
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="020" data-bit="32"/> Mate Reverse Strand
+                </label>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="040" data-bit="64"/> First in Pair
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="080" data-bit="128"/> Second in Pair
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="100" data-bit="256"/> Secondary Alignment
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="200" data-bit="512"/> Read Fails Platform/Vendor Quality Checks
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="400" data-bit="1024"/> Read is PCR or Optical Duplicate
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="sam-flags-noselect">
+                    <input type="checkbox" id="800" data-bit="2048"/> Supplementary Alignment
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row sam-flags-spacer">
+        <span style="font-size:2em">Summary:</span>
+        <div class="col-xs-12" id="summary">
+        </div>
+    </div>
+</section>
+</body>
+</html>
